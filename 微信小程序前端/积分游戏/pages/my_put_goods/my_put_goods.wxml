@@ -1,0 +1,22 @@
+<!--pages/my_put_goods/my_put_goods.wxml-->
+<view class='items'>
+  <view class='item' view wx:for-items="{{my_goods_list}}" wx:for-item="item" wx:key="id">
+    <image src="{{item.goods_image}}" />
+    <view class='info'>
+      <!-- 信息 -->
+      <view class='meta'>
+        <text class='name'>{{item.goods_title}}</text>
+        <text class='type' style="color: {{item.task_status == 3 ? 'green' : 'red'}};">{{item.task_status == 2 ? "已使用" : "未使用"}}</text>
+        <text class='author'>内容：{{item.goods_content}}</text>
+      </view>
+
+      <!-- 其他 -->
+      <view class='extra'>
+        <block>
+          <text class='score'>{{item.goods_price}}<text class='label'>分</text></text>
+          <button class='btn' bindtap="out" data-index="{{index}}">下架</button>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

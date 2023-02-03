@@ -1,0 +1,20 @@
+<view class="form">
+  <view class="row-group">
+    <text>标题</text>
+    <input placeholder="请填写商品名字，不能超过12个字" placeholder-class='txt' maxlength='12' value="{{goods_title}}" bindinput="bindTitleInput" />
+  </view>
+  <view class="row-group">
+    <text>内容</text>
+    <input placeholder="请填写商品说明，不能超过80字，尽量简洁" placeholder-class='txt' value="{{goods_content}}" bindinput="bindContentInput" />
+  </view>
+  <view class="row-group">
+    <text>价值</text>
+    <input placeholder="请填写整数，不要有小数点" placeholder-class='txt' value="{{goods_price}}" bindinput="bindPricetInput" />
+  </view>
+  <view class="row-group">
+    <text>发布人：{{user_name}}</text>
+  </view>
+  <view>
+    <button class="submit" bindtap="put">提交</button>
+  </view>
+</view>

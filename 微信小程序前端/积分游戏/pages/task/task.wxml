@@ -1,0 +1,21 @@
+<!-- 任务列表 -->
+<block wx:for="{{list}}" wx:key="index">
+  <view class="view_tupian_wenzi" bindtap="click" id="{{index}}">
+    <image class="image_1" src="{{item.user_image}}" />
+    <view class="view_wenzi2">
+      <view>
+        <text>{{item.task_title}}</text>
+        <text class="progress">进度：{{item.task_progress}}%</text>
+      </view>
+      <text class="text_small">{{item.task_content}}</text>
+      <view class="user_add">
+        <text>发布人：{{item.user_name}}</text>
+        <text class="price_right">￥{{item.task_price}}</text>
+      </view>
+    </view>
+  </view>
+</block>
+<!-- 添加按钮 -->
+<view class="add-wrap">
+  <image src="../images/add.png" bindtap="go_put_task"></image>
+</view>

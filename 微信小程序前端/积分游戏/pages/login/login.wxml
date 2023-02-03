@@ -1,0 +1,16 @@
+<view class="form">
+  <view class="row-group">
+    <text>手机</text>
+    <input placeholder="请填写手机号码" placeholder-class='txt' maxlength='11' value="{{phone}}" bindinput="bindPhoneInput" />
+  </view>
+
+   <view class="row-group">
+    <text>密码</text>
+    <input placeholder="请填写密码"  password='{{pw_hidden}}' value="{{pw}}" bindinput="bindPwInput" />
+    <view class="code" bindtap="changePwhidden">{{txt_hidden}}密码</view>
+  </view>
+
+  <view>
+    <button class="submit" bindtap="login">登录</button>
+  </view>
+</view>

@@ -1,0 +1,28 @@
+/* pages/DetailSetting/DetailSetting.wxss */
+/*竖向标题*/
+page{
+  background: #ebebeb;
+}
+#menus{
+  background: #ffffff;
+  height: auto;
+  width: 100%;
+}
+#menus .content{
+  height: 90rpx;
+  border-bottom: 1rpx soild #ebebeb;
+}
+#menus .content view{
+  float: left;
+}
+#menus .content view text{
+  font-size: 30rpx;
+  line-height: 90rpx;
+  padding-left: 40rpx;
+}
+#menus .content .right{
+  height: 90rpx;
+  line-height: 90rpx;
+  float: right;
+  margin-right: 20rpx;
+}

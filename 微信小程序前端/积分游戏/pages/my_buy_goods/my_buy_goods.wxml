@@ -1,0 +1,38 @@
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<view class='items' hidden="{{currentTab!==0}}">
+  <view class='item' view wx:for-items="{{buying_list}}" wx:for-item="item" wx:key="id">
+    <image src="{{item.goods_image}}"/>
+    <view class='info'>
+      <!-- 信息 -->
+      <view class='meta'>
+        <text class='name'>{{item.goods_title}}</text>
+        <text class='type'>等待使用中</text>
+        <text class='author'>内容：{{item.goods_content}}</text>
+      </view>
+
+      <!-- 其他 -->
+      <view class='extra'>
+        <block>
+          <view style="margin-top: 10rpx;margin-left: 25rpx;">
+            <button class='btn' bindtap="pass" data-index="{{index}}">销核</button>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='items' hidden="{{currentTab!==1}}">
+  <view class='item' view wx:for-items="{{buyed_list}}" wx:for-item="item" wx:key="id">
+    <image src="{{item.goods_image}}" />
+    <view class='info'>
+      <!-- 信息 -->
+      <view class='meta'>
+        <text class='name'>{{item.goods_title}}</text>
+        <text class='author'>内容：{{item.goods_content}}</text>
+      </view>
+    </view>
+  </view>
+</view>

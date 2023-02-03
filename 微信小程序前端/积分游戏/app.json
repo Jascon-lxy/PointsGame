@@ -1,0 +1,61 @@
+{
+  "pages": [
+    
+    "pages/index/index",
+    "pages/task/task",
+    "pages/logs/logs",
+    "pages/goods/goods",
+    "pages/message/message",
+    "pages/mine/mine",
+    "pages/put_task/put_task",
+    "pages/login/login",
+    "pages/DetailTask/DetailTask",
+    "pages/examine/examine",
+    "pages/my_task/my_task",
+    "pages/DetailSetting/DetailSetting",
+    "pages/put_goods/put_goods",
+    "pages/DetailGoods/DetailGoods",
+    "pages/my_buy_goods/my_buy_goods",
+    "pages/my_put_goods/my_put_goods"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "For The Best You",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#FF7300",
+    "borderStyle": "black",
+    "list":[{
+      "selectedIconPath": "pages/images/first_s.png",
+      "iconPath": "pages/images/first.png",
+      "pagePath": "pages/index/index",
+      "text": "首页"
+    },{
+      "selectedIconPath": "pages/images/task_s.png",
+      "iconPath": "pages/images/task.png",
+      "pagePath": "pages/task/task",
+      "text": "任务"
+    },{
+      "selectedIconPath": "pages/images/goods_s.png",
+      "iconPath": "pages/images/goods.png",
+      "pagePath": "pages/goods/goods",
+      "text": "奖励"
+    },{
+      "selectedIconPath": "pages/images/message_s.png",
+      "iconPath": "pages/images/message.png",
+      "pagePath": "pages/message/message",
+      "text": "留言板"
+    },{
+      "selectedIconPath": "pages/images/mine_s.png",
+      "iconPath": "pages/images/mine.png",
+      "pagePath": "pages/mine/mine",
+      "text": "我的"
+    }]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

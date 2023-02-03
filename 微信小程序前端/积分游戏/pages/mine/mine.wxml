@@ -1,0 +1,28 @@
+<!--头像-->
+<view id="header">
+  <view class="content">
+    <image src="{{user_info.user_image}}"></image>
+    
+    <view>
+    <!--微信名-->
+      <view class="nickName">{{user_info.user_name}}</view>
+    <!-- 积分 -->
+      <view class="integral">积分余额：{{user_info.user_price}}</view>
+    </view>
+  </view>
+</view>
+
+<!--竖向标题-->
+<view id="menus">
+  <view class="content" wx:for="{{y_menus}}" data-idx="{{index}}" bindtap="mine_tap" >
+    <view class="view">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="right">
+      <image src="../images/rightjian.png" style="width:14px;height:14px;"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 底部信息 -->
+<view class="callme">个人开发，出bug了，请你直接微信滴我，谢谢合作！</view>

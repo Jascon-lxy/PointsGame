@@ -1,0 +1,43 @@
+<view class="view_tupian_wenzi">
+  <view class="view_title">
+    <image class="image_title" src="{{user_image}}"></image>
+    <view class="task_title_user">
+      <text class="task_title">{{task_title}}</text>
+      <view class="userAndprice">
+        <text class="user">发布人：{{user_name}}</text>
+        <text class="price">￥{{task_price}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="view_content">
+    <view class="content_title">内容：</view>
+    <view>
+      <text decode="{{true}}"> &nbsp; &nbsp;{{task_content}}</text>
+    </view>
+  </view>
+  <view class="view_time">
+    <view class="content_title">时间</view>
+    <view class="task_title_user">
+      <text>开始时间：{{task_begin_data}}</text>
+      <text>结束时间：{{task_end_data}}</text>
+    </view>
+  </view>
+  <view>
+    <view class="content_title">进度：{{task_progress}}%（剩余：{{days}}天）</view>
+    <progress percent="{{task_progress}}" active></progress>
+  </view>
+  <view class="form">
+    <view class="row-group">
+      <text class="content_title">备注</text>
+      <input placeholder="任务失败则填写，老规矩80字以内" type="text" bindinput="bindRemarksInput" />
+    </view>
+  </view>
+</view>
+<view style="display: flex">
+  <view class="false_view">
+    <image class="false_image" src="../images/false.png" bindtap="false"></image>
+  </view>
+  <view class="true_view">
+    <image class="true_image" src="../images/true.png" bindtap="true"></image>
+  </view>
+</view>

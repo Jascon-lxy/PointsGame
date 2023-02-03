@@ -1,0 +1,28 @@
+<swiper class="banner">
+  <swiper-item>
+    <image src="{{goods_info.goods_image}}" class="slide-image" mode="aspectFill" />
+  </swiper-item>
+</swiper>
+<view class="info-title">
+  <text>{{goods_info.goods_title}}</text>
+</view>
+<!--商品详情-->
+<view class='details_box'>
+  <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+    <view>商品详情</view>
+  </view>
+  <view style='padding:10px 0px;'>
+    <view class="wxParse">
+      {{goods_info.goods_content}}
+    </view>
+  </view>
+</view>
+
+<view class="goodsaction">
+  <view class="logo">
+    <text>价格：￥{{goods_info.goods_price}}</text>
+  </view>
+  <view class="action_btn">
+    <button class="btn_right" bindtap="buy">立即兑换</button>
+  </view>
+</view>

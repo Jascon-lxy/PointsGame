@@ -1,0 +1,43 @@
+<!-- 顶部导航栏 -->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+
+<!--小刘老师-->
+<view hidden="{{currentTab!==0}}">
+  <view class='shop_Box'>
+    <view class='shopBox' wx:for='{{xiaoliu_con}}' wx:key='{{index}}' wx:for-index="index" wx:for-item="con" bindtap="goTodatilxiaoliu" id = "{{index}}">
+      <view class='shopImg'>
+        <image src='{{con.goods_image}}' />
+      </view>
+      <view class='shopName'>{{con.goods_title}}</view>
+      <view class='shopMessage'>
+        <view class='shops'>
+          <text class='shopPrice'>￥{{con.goods_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!--小龙同志-->
+<view hidden="{{currentTab!==1}}">
+  <view class='shop_Box'>
+    <view class='shopBox' wx:for='{{xiaolong_con}}' wx:key='{{index}}' wx:for-index="index" wx:for-item="con" bindtap="goTodatilxiaolong" id = "{{index}}">
+      <view class='shopImg'>
+        <image src='{{con.goods_image}}' />
+      </view>
+      <view class='shopName'>{{con.goods_title}}</view>
+      <view class='shopMessage'>
+        <view class='shops'>
+          <text class='shopPrice'>￥{{con.goods_price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 添加按钮 -->
+<view class="add-wrap">
+  <image src="../images/add.png" bindtap="go_put_goods"></image>
+</view>

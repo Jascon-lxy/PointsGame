@@ -1,0 +1,12 @@
+<!--pages/DetailSetting/DetailSetting.wxml-->
+<!--竖向标题-->
+<view id="menus">
+  <view class="content" wx:for="{{setting_menus}}" data-idx="{{index}}" bindtap="mine_tap" >
+    <view class="view">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="right">
+      <image src="../images/rightjian.png" style="width:14px;height:14px;"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,32 @@
+<view class="form">
+  <view class="row-group">
+    <text>标题</text>
+    <input placeholder="请填写任务标题，不能超过八个字" placeholder-class='txt' maxlength='8' value="{{task_title}}" bindinput="bindTitleInput" />
+  </view>
+  <view class="row-group">
+    <text>内容</text>
+    <input placeholder="请填写任务内容，不能超过80字，尽量简洁" placeholder-class='txt' value="{{task_content}}" bindinput="bindContentInput" />
+  </view>
+  <view class="row-group">
+    <picker mode="date" value="{{data}}" bindchange="bindBeginDataChange">
+      <text>开始时间：</text>
+      <text>{{begin_data}}</text>
+    </picker>
+  </view>
+  <view class="row-group">
+    <picker mode="date" value="{{data}}" bindchange="bindEndDataChange">
+      <text>结束时间：</text>
+      <text>{{end_data}}</text>
+    </picker>
+  </view>
+  <view class="row-group">
+    <text>价值：￥{{task_price}}</text>
+    <slider value="{{task_price}}" bindchanging="PriceChange" max="100" min="1"></slider>
+  </view>
+  <view class="row-group">
+    <text>发布人：{{user_name}}</text>
+  </view>
+  <view>
+    <button class="submit" bindtap="put">提交</button>
+  </view>
+</view>

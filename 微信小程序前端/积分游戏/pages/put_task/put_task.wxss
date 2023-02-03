@@ -1,0 +1,31 @@
+/* pages/put_task/put_task.wxss */
+.form{
+  padding: 40rpx;
+}
+.form .row-group{
+  padding: 20rpx 0;
+  position: relative;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.form .row-group text{
+  font-size: 28rpx;
+  padding:10rpx 0;
+}
+
+.form .row-group input{
+  padding: 10rpx 0;
+}
+
+.form .row-group .txt{
+  color: #ccc;
+}
+
+.form .submit{
+  margin-top: 40rpx;
+  color: #fff;
+  border: 2rpx solid #00c8b6;
+  background-color: #00c8b6;
+  font-size: 32rpx;
+  font-weight: bold;
+}

@@ -1,0 +1,50 @@
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<view class='items' hidden="{{currentTab!==0}}">
+  <view class='item' view wx:for-items="{{Examining_list}}" wx:for-item="item" wx:key="id">
+    <image src="{{item.user_image}}"/>
+    <view class='info'>
+      <!-- 信息 -->
+      <view class='meta'>
+        <text class='name'>{{item.task_title}}</text>
+        <text class='type'>等待审核中</text>
+        <text class='author'>内容：{{item.task_content}}</text>
+        <text class='author'>结束时间：{{item.task_end_data}}</text>
+      </view>
+
+      <!-- 其他 -->
+      <view class='extra'>
+        <block>
+          <text class='score'>{{item.task_price}}<text class='label'>分</text></text>
+          <view style="margin-top: 10rpx;margin-left: 25rpx;">
+            <button class='btn' bindtap="pass" data-index="{{index}}">通过</button>
+            <button class='btn' bindtap="refuse" data-index="{{index}}">拒绝</button>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='items' hidden="{{currentTab!==1}}">
+  <view class='item' view wx:for-items="{{Examined_list}}" wx:for-item="item" wx:key="id">
+    <image src="{{item.user_image}}" />
+    <view class='info'>
+      <!-- 信息 -->
+      <view class='meta'>
+        <text class='name'>{{item.task_title}}</text>
+        <text class='type' style="color: {{item.task_status == 2 ? 'green' : 'red'}};">{{item.task_status == 2 ? "审核通过" : "审核不通过"}}</text>
+        <text class='author'>内容：{{item.task_content}}</text>
+        <text class='author'>结束时间：{{item.task_end_data}}</text>
+      </view>
+
+      <!-- 其他 -->
+      <view class='extra'>
+        <block>
+          <text class='score'>{{item.task_price}}<text class='label'>分</text></text>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

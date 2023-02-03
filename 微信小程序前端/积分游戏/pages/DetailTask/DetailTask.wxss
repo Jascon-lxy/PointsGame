@@ -1,0 +1,115 @@
+/* pages/DetailTask/DetailTask.wxss */
+.view_tupian_wenzi {
+  height: 950rpx;
+  /* display: flex; */
+  flex-direction: row;
+  align-items: center;
+
+  /* 圆角 */
+  border-radius: 20rpx;
+
+  /* 边 */
+  border: 3rpx solid #E0E3DA;
+  box-shadow: 5rpx 5rpx 5rpx 5rpx #E0E3DA;
+
+  background-color: #ffffff;
+  margin: 30rpx;
+
+  /* padding使得文字和图片不至于贴着边框 */
+  padding: 30rpx;
+
+}
+
+.view_title {
+  display: flex;
+  height: 160rpx;
+}
+
+.image_title {
+  height: 160rpx;
+  width: 160rpx;
+}
+
+.task_title_user {
+  display: flex;
+  margin-left: 25rpx;
+  flex-direction: column;
+}
+
+.task_title {
+  font-weight: bold;
+  font-size: 40rpx;
+}
+
+.userAndprice {
+  padding-top: 40rpx;
+}
+
+.price {
+  position: absolute;
+  right: 0;
+  margin-right: 70rpx;
+  color: red;
+}
+
+.view_content {
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  width: 100%;
+  height: 300rpx;
+}
+
+.content_title {
+  padding-bottom: 10rpx;
+  font-weight: bold;
+}
+
+.view_time {
+  margin-bottom: 20rpx;
+}
+
+progress {
+  padding-top: 10rpx;
+}
+
+.form {
+  margin-top: 20rpx;
+}
+
+.form .row-group {
+  padding: 20rpx 0;
+  position: relative;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.form .row-group input {
+  padding: 10rpx 0;
+}
+
+.form .row-group .txt {
+  color: #ccc;
+}
+
+.false_view {
+  height: 150rpx;
+  width: 150rpx;
+  margin-left: 150rpx;
+}
+
+.false_image {
+  width: 150rpx;
+  height: 150rpx;
+}
+
+.true_view {
+  height: 150rpx;
+  width: 150rpx;
+  position: absolute;
+  right: 0;
+  margin-right: 170rpx;
+}
+
+.true_image {
+  height: 150rpx;
+  width: 150rpx;
+}

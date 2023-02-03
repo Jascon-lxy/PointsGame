@@ -1,0 +1,29 @@
+<view>
+  <!-- 轮播图 -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" circular="{{circular}}" bindchange="swiperBindchange">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.image_url}}" mode="aspectFill" class="slide-image {{currentSwiperIndex == index ? 'zoom-in' : 'zoom-out'}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view>
+    <view class="title_task">近期任务</view>
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="view_tupian_wenzi" bindtap="click" id="{{index}}">
+        <image class="image_1" src="{{item.user_image}}" />
+        <view class="view_wenzi2">
+          <view>
+            <text>{{item.task_title}}</text>
+            <text class="progress">进度：{{item.task_progress}}%</text>
+          </view>
+          <text class="text_small">{{item.task_content}}</text>
+          <view class="user_add">
+            <text>发布人：{{item.user_name}}</text>
+            <text class="price_right">￥{{item.task_price}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
